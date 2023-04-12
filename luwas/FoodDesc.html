@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Desc</title>
+</head>
+<style>
+    /* make scrollbar invisible */
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins';
+    }
+
+    .ColorBg {
+        background-color: #F79240;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 10px;
+    }
+
+    .ColorBg .Auto {
+        margin-top: 8px;
+        border-radius: 10px;
+        width: 100%;
+        position: fixed;
+    }
+
+    .white-desc {
+        background-color: white;
+        width: 100%;
+        height: 70%;
+        margin-bottom: -150px;
+        border-radius: 30px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .bar {
+        width: 100px;
+        height: 4px;
+        background-color: #D9d9d9;
+        border-radius: 30px;
+        margin-top: -5px;
+    }
+
+    .DescUp {
+        text-align: center;
+        font-size: 15px;
+        top: 0;
+        margin-top: 10px;
+    }
+
+    .DescMore {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 40px;
+        align-items: center;
+    }
+
+    .DescMoreLittleSecond {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .backbutton {
+        width: 50px;
+        height: 50px;
+        background-color: #F79240;
+        border-radius: 50%;
+        position: fixed;
+        top: 20px;
+        left: 15px;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .backbutton .backbtn {
+        width: 14px;
+        height: 22px;
+    }
+
+    .line {
+        margin-top: 20px;
+        width: 100vw;
+        height: 2px;
+        background-color: #D9d9d9;
+    }
+
+    .wrapsecond {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    .foodComp {
+        display: flex;
+        align-items: center;
+    }
+
+    .NewD1 {
+        font-size: 17px;
+    }
+
+    .NewD2 {
+        font-size: 13px;
+        color: #939090;
+    }
+
+    .foodComp {
+        gap: 10px;
+    }
+
+    .nameAbout {
+        font-size: 13px;
+    }
+
+    .Harga span {
+        font-size: 14px;
+        color: #939090;
+    }
+
+    .wrapthird {
+        display: flex;
+        margin-top: 20px;
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .CircleTombolKanan {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .CircleTombolKanan svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .dalamkanan {
+        display: flex;
+        padding: 8px 10px;
+        background-color: #F79240;
+        border-radius: 20px;
+        margin-right: -15px;
+    }
+
+    .dalamkanan p {
+        width: 90px;
+        color: white;
+    }
+
+    .dalamkanan img {
+        width: 20px;
+        height: 20px;
+    }
+</style>
+
+<body>
+    <div class="Wrap">
+        <div class="ColorBg">
+            <div class="backbutton">
+                <img class="backbtn" src="./src/FoodDesc/back.png" alt="">
+            </div>
+            <img class="Auto" style="background-attachment: fixed;" src="./src/FoodDesc/NasiGoreng.png" alt="">
+        </div>
+        <div class="white-desc">
+            <span class="bar"></span>
+            <p class="DescUp">Rice Noodles with shrimps,egg,pork,choy,cabbage.Noodles
+                fave or trying something completely new, we want your
+                tastebuds to be your happy buds.
+            </p>
+            <div class="DescMore">
+                <div class="DescMoreLittle">
+                    <h1 style="font-weight:600; font-size: 30px;">Nasi Goreng</h1>
+                    <p>300g/350kcal</p>
+                </div>
+                <div class="DescMoreLittleSecond">
+                    <p>1</p>
+                    <p>Portion</p>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="wrapsecond">
+                <div class="foodComp">
+                    <img src="./src/FoodDesc/FC.png" alt="">
+                    <div>
+                        <p class="NewD1">Chin Club</p>
+                        <p class="NewD2">3.1 km from you</p>
+                    </div>
+                </div>
+                <div class="starcomp">
+                    <img src="./src/FoodDesc/Star.png" alt="">
+                </div>
+            </div>
+
+            <div class="wrapthird">
+                <div class="CircleTombolKiri">
+                    <p class="Harga">Price : <span>$9.20</span></p>
+                </div>
+
+                <div class="CircleTombolKanan">
+                    <svg class="hati" xmlns="http://www.w3.org/2000/svg" fill="#939090" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                    <div class="dalamkanan">
+                        <p class="nameAbout">Add to cart</p>
+                        <img src="./src/FoodDesc/Plus.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var hati = document.querySelector('.hati');
+    var count = 0;
+    addEventListener('click', function () {
+        count++;
+        if (count % 2 == 0) {
+            hati.style.fill = "#939090";
+            hati.style.transition = "all 0.5s ease";
+        } else {
+            hati.style.fill = "red";
+            hati.style.transition = "all 0.5s ease";
+        }
+    })
+</script>
+
+</html>
