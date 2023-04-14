@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'Poppins';
+        background-color: #FFFEFC;
+
+    }
+    .main{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .top{
+        display: flex;
+        width: 100vw;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 20px;
+        gap: 10px;
+    }
+    .first{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .tophide{
+        opacity: 0;
+    }
+    .Ijki{
+        font-weight: 500;
+        font-size: 21px;
+    }
+    .second{
+        margin-top: 10px;
+        width: 85%;
+    }
+    .third{
+        margin-top: 10px;
+        width: 85%;
+    }
+    .fourth{
+        position: fixed;
+        bottom: 30px;
+        width: 85%;
+    }
+    .InfoMasseh{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0px 10px 40px rgba(0, 0, 0,0.03);
+    }
+    .AnakInfoLogo{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .makankiri{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .MakanList label{
+        display: flex;
+        gap: 20px;
+    }
+    .DalamMakan{
+        display: flex;
+        flex-direction: row;
+        background-color: #FFFFFf;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 15px 19px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 10px 40px rgba(0, 0, 0, 0.03);
+        border-radius: 20px;
+
+    }
+    .foodcount{
+        background-color: #F79240;
+        width: 60px;
+        height: 20px;
+        color: white;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        border-radius: 10px;
+    }
+    input[type="checkbox"]{
+        scale: 2.3;
+    }
+    .kiridesc p{
+        font-size: 15px;
+    }
+    .kirigambar img{
+        border-radius: 50%;
+        margin-left: -10px;
+    }
+    .MakanList{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .makankanan{
+        position: absolute;
+        right: 60px;
+        margin-top: 20px;
+    }
+    .nameNasgor{
+        color: #F79240;
+    }
+    .orderBut{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 10px;
+        background-color: #F79240;
+        border-radius: 30px;
+    }
+    .orderBut p{
+        color: white;
+        font-weight: 500;
+        font-size: 20px;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="first">
+            <div class="top">
+                <img src="./src/helpcen/back.png" alt="">
+                <p class="Ijki">CART</p>
+                <img class="tophide" src="./src/helpcen/back.png" alt="">
+            </div>
+        </div>
+        <div class="second">
+            <div class="InfoMasseh">
+                <div class="InfoLogo">
+                    <div class="AnakInfoLogo">
+                        <img src="./src/Cart/logos2.png" alt="">
+                        <p>Chin Club</p>
+                    </div>
+                </div>
+                <div class="MakanList">
+                    <label>
+                        <input type="checkbox">
+                        <div class="DalamMakan">
+                            <div class="makankiri">
+                                <div class="kirigambar">
+                                    <img src="./src/Cart/nasgor.png" alt="">
+                                </div>
+                                <div class="kiridesc">
+                                    <p>Nasi goreng</p>
+                                    <p class="nameNasgor">Rp. 21.900,00</p>
+                                </div>
+                            </div>
+                            <div class="makankanan">
+                                <p class="foodcount">-&nbsp;&nbsp;1&nbsp;&nbsp;+</p>
+                            </div>
+                        </div>
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="" id="">
+                        <div class="DalamMakan">
+                            <div class="makankiri">
+                                <div class="kirigambar">
+                                    <img src="./src/Cart/nasgors.png" alt="">
+                                </div>
+                                <div class="kiridesc">
+                                    <p>Nasi goreng Spesial</p>
+                                    <p class="nameNasgor">Rp. 21.900,00</p>
+                                </div>
+                            </div>
+                            <div class="makankanan">
+                                <p class="foodcount">-&nbsp;&nbsp;1&nbsp;&nbsp;+</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="third">
+            <div class="InfoMasseh">
+                <div class="InfoLogo">
+                    <div class="AnakInfoLogo">
+                        <img src="./src/Cart/logos1.png" alt="">
+                        <p>Rumah Makan Senang</p>
+                    </div>
+                </div>
+                <div class="MakanList">
+                    <label>
+                        <input type="checkbox" name="" id="">
+                        <div class="DalamMakan">
+                            <div class="makankiri">
+                                <div class="kirigambar">
+                                    <img src="./src/Cart/nasgor2.png" alt="">
+                                </div>
+                                <div class="kiridesc">
+                                    <p>Fish With Mix Orange...</p>
+                                    <p class="nameNasgor">Rp. 31.900,00</p>
+                                </div>
+                            </div>
+                            <div class="makankanan">
+                                <p class="foodcount">-&nbsp;&nbsp;1&nbsp;&nbsp;+</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="fourth">
+            <div class="orderBut">
+                <p>ORDER</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
