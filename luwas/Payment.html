@@ -74,7 +74,7 @@
         border-bottom: 0.5px rgba(0, 0, 0, 0.491) solid;
     }
     .Dalam2{
-        height: 30vh;
+        height: 25vh;
         background-color: #FFFFFF;
         border-radius: 10px;
         box-shadow: 0px 10px 40px rgba(0, 0, 0,0.03);
@@ -160,6 +160,24 @@
     .AnakInfoLogo p{
         font-weight: 600;
     }
+    .fourth{
+        width: 85%;
+    }
+    .orderBut{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 10px;
+        background-color: #F79240;
+        border-radius: 30px;
+        margin-bottom: 12px;
+    }
+    .orderBut p{
+        color: white;
+        font-weight: 500;
+        font-size: 20px;
+    }
 </style>
 <body>
     <div class="main">
@@ -210,20 +228,22 @@
                 <p class="Ijki">Payment Method</p>
             </div>
             <div class="Dalam">
-                <label for="mybutton">
-                    <input id="my-radio" type="radio" name="radio">
-                    <div class="gambar1">
-                        <img src="./src/payment/Card.png" alt="">
-                    </div>
-                    <span>Card</span>
-                </label>
-                <label for="mybutton">
-                    <input id="my-radio" type="radio" name="radio">
-                    <div class="gambar2">
-                       <img src="./src/payment/bank.png" alt="">
-                    </div>
-                    <span>Bank Account</span>
-                </label>
+                <form>
+                    <label for="mybutton">
+                        <input id="my-radio" type="radio" name="radio">
+                        <div class="gambar1">
+                            <img src="./src/payment/Card.png" alt="">
+                        </div>
+                        <span>Card</span>
+                    </label>
+                    <label for="mybutton">
+                        <input id="my-radio" type="radio" name="radio">
+                        <div class="gambar2">
+                           <img src="./src/payment/bank.png" alt="">
+                        </div>
+                        <span>Bank Account</span>
+                    </label>
+                </form>
             </div>
             <div class="inside">
                 <p class="Ijki">Delivery Options</p>
@@ -237,6 +257,11 @@
                     <input id="my-radio" type="radio" name="radio">
                     <span>Pickup</span>
                 </label>
+            </div>
+        </div>
+        <div class="fourth">
+            <div class="orderBut">
+                <p>ORDER</p>
             </div>
         </div>
     </div>
