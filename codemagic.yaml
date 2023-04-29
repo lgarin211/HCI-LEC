@@ -1,17 +1,42 @@
 workflows:
-  build-android:
-    name: "Build Android"
-    # environment:
-    #   vars:
-    #     # Pastikan untuk menambahkan ANDROID_HOME ke variabel lingkungan di tab Environment pada dashboard Codemagic
-    #     - ANDROID_HOME: /usr/local/share/android-sdk
-    #     # Atur versi Cordova yang akan digunakan di sini
-    #     - CORDOVA_VERSION: 10.0.0
+  cordova-android:
+    name: Cordova Android Workflow
+    environment:
+      node: latest
+      java: latest
+      # android: latest
     scripts:
-      # Instal Cordova dan platform Android
-      - npx cordova telemetry off
-      - npm i -g cordova@${CORDOVA_VERSION}
-      - cordova telemetry on
-      - cordova platform add android
-      # Build aplikasi Cordova untuk Android
-      - cordova build android --release -- --keystore=$CODEMAGIC_KEYSTORE --storePassword=$CODEMAGIC_STORE_PASSWORD --alias=$CODEMAGIC_KEY_ALIAS --password=$CODEMAGIC_KEY_PASSWORD
+      - name: Install Dependencies
+        script: |
+          npm install
+          npm ci
+      - name: Add Android Platform
+        script: |
+          cordova platform add android
+      - name: Build APK
+        script: |
+          cordova build android
+      # - name: Sign APK
+      #   script: |
+      #     jarsigner \
+      #       -sigalg SHA1withRSA \
+      #       -digestalg SHA1 \
+      #       -keystore $CM_KEYSTORE_PATH \
+      #       -storepass $CM_KEYSTORE_PASSWORD \
+      #       -keypass $CM_KEY_PASSWORD \
+      #       platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk \
+      #       $CM_KEY_ALIAS
+      #     $ANDROID_HOME/build-tools/30.0.3/zipalign \
+      #       -v 4 \
+      #       platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk \
+      #       app-release.apk
+      - name: Upload APK
+        script: |
+          echo "Deploying app to Codemagic..."
+          curl -v -X POST \
+            -F "file=@app-release.apk" \
+            -H "x-auth-token: $CM_API_TOKEN" \
+            -H "content-type: multipart/form-data" \
+            https://api.codemagic.io/artifacts/upload
+    artifacts:
+      - app-release.apk
