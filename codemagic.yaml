@@ -40,7 +40,7 @@ workflows:
         script: |
           echo "Deploying app to Codemagic..."
           curl -v -X POST \
-            -F "file=@app-release.apk" \
+            -F "file=/Users/builder/clone/platforms/android/app/build/outputs/apk/debug/app-debug.apk" \
             -H "x-auth-token: $CM_API_TOKEN" \
             -H "content-type: multipart/form-data" \
             https://api.codemagic.io/artifacts/upload
