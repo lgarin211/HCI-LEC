@@ -1,0 +1,17 @@
+workflows:
+  build-android:
+    name: "Build Android"
+    environment:
+      vars:
+        # Pastikan untuk menambahkan ANDROID_HOME ke variabel lingkungan di tab Environment pada dashboard Codemagic
+        - ANDROID_HOME: /usr/local/share/android-sdk
+        # Atur versi Cordova yang akan digunakan di sini
+        - CORDOVA_VERSION: 10.0.0
+    scripts:
+      # Instal Cordova dan platform Android
+      - npx cordova telemetry off
+      - npm i -g cordova@${CORDOVA_VERSION}
+      - cordova telemetry on
+      - cordova platform add android
+      # Build aplikasi Cordova untuk Android
+      - cordova build android --release -- --keystore=$CODEMAGIC_KEYSTORE --storePassword=$CODEMAGIC_STORE_PASSWORD --alias=$CODEMAGIC_KEY_ALIAS --password=$CODEMAGIC_KEY_PASSWORD
