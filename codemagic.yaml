@@ -3,13 +3,19 @@ workflows:
     name: Cordova Android Workflow
     environment:
       node: latest
-      java: latest
+      # java: latest
       # android: latest
     scripts:
       - name: Install Dependencies
         script: |
           npm install
           npm ci
+          curl -s "https://get.sdkman.io" | bash
+          source "$HOME/.sdkman/bin/sdkman-init.sh"
+          sdk install java 8.0.352-amzn
+          sdk install gradle
+
+
       - name: Add Android Platform
         script: |
           cordova platform add android
