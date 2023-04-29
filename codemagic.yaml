@@ -1,12 +1,12 @@
 workflows:
   build-android:
     name: "Build Android"
-    environment:
-      vars:
-        # Pastikan untuk menambahkan ANDROID_HOME ke variabel lingkungan di tab Environment pada dashboard Codemagic
-        - ANDROID_HOME: /usr/local/share/android-sdk
-        # Atur versi Cordova yang akan digunakan di sini
-        - CORDOVA_VERSION: 10.0.0
+    # environment:
+    #   vars:
+    #     # Pastikan untuk menambahkan ANDROID_HOME ke variabel lingkungan di tab Environment pada dashboard Codemagic
+    #     - ANDROID_HOME: /usr/local/share/android-sdk
+    #     # Atur versi Cordova yang akan digunakan di sini
+    #     - CORDOVA_VERSION: 10.0.0
     scripts:
       # Instal Cordova dan platform Android
       - npx cordova telemetry off
