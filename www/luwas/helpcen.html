@@ -84,16 +84,20 @@
     .Items li img{
         width:9px;
         height: 13px;
-
+    }
+    .backbutton{
+        position: absolute;
+        left: 20px;
     }
 </style>
 <body>
     <div class="main">
         <div class="first">
             <div class="top">
-                <img src="./src/helpcen/back.png" alt="">
+                <span class="backbutton">
+                    <img class="TUI" src="./src/helpcen/back.png" alt="">
+                </span>
                 <p class="Ijki">JALA HELP CENTRE</p>
-                <img class="tophide" src="./src/helpcen/back.png" alt="">
             </div>
             <div class="searchbar">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -129,4 +133,13 @@
         
     </div>
 </body>
+<script>
+    const back = document.querySelector('.backbutton');
+        back.onclick = function () {
+            goback();
+        }
+        function goback(){
+            history.back();
+        }
+</script>
 </html>

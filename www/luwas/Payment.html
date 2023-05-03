@@ -36,13 +36,11 @@
         justify-content: space-evenly;
         margin-top: 20px;
         gap: 20px;
+        height: 50px;
     }
 
-    .first {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+    .first{
+        height: 100px;
     }
 
     .tophide {
@@ -207,15 +205,20 @@
         font-weight: 500;
         font-size: 20px;
     }
+    .backbutton{
+        left: 20px;
+        position: absolute;
+    }
 </style>
 
 <body>
     <div class="main">
         <div class="first">
             <div class="top">
-                <img src="./src/helpcen/back.png" alt="">
+                <span class="backbutton">
+                    <img class="TUI" src="./src/helpcen/back.png" alt="">
+                </span>
                 <p class="Ijki">Payment Method</p>
-                <img class="tophide" src="./src/helpcen/back.png" alt="">
             </div>
         </div>
         <div class="second">
@@ -290,13 +293,26 @@
             </div>
         </div>
         <div class="fourth">
-            <a href="./finish.html">
-                <div class="orderBut">
-                    <p>ORDER</p>
-                </div>
-            </a>
+            <div class="orderBut">
+                <p>ORDER</p>
+            </div>
         </div>
     </div>
 </body>
+
+<script>
+    const back = document.querySelector('.backbutton');
+        back.onclick = function () {
+            goback();
+        }
+        function goback(){
+            history.back();
+        }
+
+    const fourth = document.querySelector('.fourth');
+    fourth.onclick = function () {
+        window.location.href = "finish.html";
+    }
+</script>
 
 </html>
