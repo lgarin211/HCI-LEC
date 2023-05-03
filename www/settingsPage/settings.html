@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- import poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -89,7 +91,46 @@
 
         });
     </script>
+    <style>
+        .top-navbar{
+            padding-top: 0;
+            position: sticky;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 110%;
+            height: 3.5rem;
+            /* background-color: red; */
+
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            /* identical to box height */
+
+
+            /* Black */
+
+            color: #000000;
+        }
+
+        .top-navbar img{
+            height: 2rem;
+            width: 2rem;
+            position: absolute;
+            left: 3rem;
+            transform: rotate(180deg);
+        }
+    </style>
+
+    
     <div class="container">
+        <div class="top-navbar">
+            <img src="arrow-next.png" alt="">
+            MY ORDER
+        </div>
         <div class="general-container">
             <div class="content-title">
                 General

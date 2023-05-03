@@ -94,7 +94,101 @@
         });
     </script>
 
-    <div class="container">
+    <style>
+        .top-navbar{
+            padding-left: 1rem;
+            padding-right: 1rem;
+            position: sticky;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 108%;
+            height: 5rem;
+            background-color: white;
+        }
+
+        .top-navbar-item-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-navbar-item{
+            position: relative;
+            width: 5rem;
+            height: 2.1875rem;
+            /* background: red; */
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: .4rem;
+        }
+
+        .top-navbar-button{
+            position: relative;
+            height: 100%;
+            width: 2.1875rem;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .top-navbar-button::after{
+            content: "";
+            background-color: #F79240;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 3.125rem;
+        }
+
+        .top-navbar-button img{
+            position: absolute;
+            z-index: 2;
+        }
+
+        .jala-jala img{
+
+        }
+
+        .padding-extra{
+            padding-bottom: 5rem;
+        }
+    </style>
+
+    <div class="container padding-extra">
+        <div class="top-navbar">
+            <div class="top-navbar-item-container">
+                <div class="top-navbar-item">
+                    <div class="top-navbar-button normal">
+                        <img src="img/navbar_top/lonceng.png" alt="">
+                    </div>
+                    <div class="top-navbar-button">
+                        <img src="img/navbar_top/chat.png" alt="">
+                    </div>
+                </div>
+                <div class="top-navbar-item jala-jala">
+                    <img src="img/navbar_top/jalajala.png" alt="">
+                </div>
+                <div class="top-navbar-item">
+                    <div class="top-navbar-button normal">
+                        <img src="img/navbar_top/search.png " alt="">
+                    </div>
+                    <div class="top-navbar-button">
+                        <img src="img/navbar_top/basket.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="content-container">
             <div class="content-title">
                 Choose Item
