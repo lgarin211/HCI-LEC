@@ -1,11 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HelloCordova</name>
-    <description>Sample Apache Cordova App</description>
+<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets"
+    xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>JALA</name>
+    <description>JALA</description>
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
-        Apache Cordova Team
+        KELOMPOK HCI
+        Agustinus Pardamean Lumban Tobing 2602191251
+        Alvina Krisendi 2602189732
+        Jefferson Timotius Mansur 2602189480
+        Louwis Steffo Dermawan 2602189751
     </author>
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+
+
+    <icon density="ldpi" src="res/icon.png" />
+    <icon density="mdpi" src="res/icon.png" />
+    <icon density="hdpi" src="res/icon.png" />
+    <icon density="xhdpi" src="res/icon.png" />
+    <icon density="xxhdpi" src="res/icon.png" />
+    <icon density="xxxhdpi" src="res/icon.png" />
+
 </widget>
