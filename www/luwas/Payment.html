@@ -32,10 +32,19 @@
 
     .top {
         display: flex;
+        width: 100vw;
         align-items: center;
         justify-content: space-evenly;
-        margin-top: 20px;
-        gap: 20px;
+        gap: 10px;
+        background-color: white;
+        height: 70px;
+        z-index: 100;
+        position: fixed;
+    }
+
+    .top img{
+        /* margin-top: -10px; */
+        left: 40px;
     }
 
     .first {
@@ -43,6 +52,11 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        
+    }
+
+    .first{
+        height: 100px;
     }
 
     .tophide {
@@ -55,7 +69,7 @@
     }
 
     .second {
-        margin-top: 10px;
+        margin-top: 100px;
         width: 85%;
     }
 
@@ -86,7 +100,7 @@
     }
 
     .Dalam2 {
-        height: 25vh;
+        height: 40vh;
         background-color: #FFFFFF;
         border-radius: 10px;
         box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.03);
@@ -188,6 +202,9 @@
     }
 
     .fourth {
+        position: fixed;
+        z-index: 1000;
+        bottom: 0;
         width: 85%;
     }
 
@@ -207,15 +224,20 @@
         font-weight: 500;
         font-size: 20px;
     }
+    .backbutton{
+        left: 20px;
+        position: absolute;
+    }
 </style>
 
 <body>
     <div class="main">
         <div class="first">
             <div class="top">
-                <img src="./src/helpcen/back.png" alt="">
+                <span class="backbutton">
+                    <img class="TUI" src="./src/helpcen/back.png" alt="">
+                </span>
                 <p class="Ijki">Payment Method</p>
-                <img class="tophide" src="./src/helpcen/back.png" alt="">
             </div>
         </div>
         <div class="second">
@@ -290,13 +312,26 @@
             </div>
         </div>
         <div class="fourth">
-            <a href="./finish.html">
-                <div class="orderBut">
-                    <p>ORDER</p>
-                </div>
-            </a>
+            <div class="orderBut">
+                <p>ORDER</p>
+            </div>
         </div>
     </div>
 </body>
+
+<script>
+    const back = document.querySelector('.backbutton');
+        back.onclick = function () {
+            goback();
+        }
+        function goback(){
+            history.back();
+        }
+
+    const fourth = document.querySelector('.fourth');
+    fourth.onclick = function () {
+        window.location.href = "finish.html";
+    }
+</script>
 
 </html>

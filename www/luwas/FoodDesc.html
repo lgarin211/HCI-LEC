@@ -132,7 +132,9 @@
         font-size: 13px;
         color: #939090;
     }
-
+    p{
+        margin-bottom: 0 !important;
+    }
     .foodComp {
         gap: 10px;
     }
@@ -174,10 +176,10 @@
     }
 
     .dalamkanan p {
-        width: 90px;
+        text-align: center;
+        width: 80px;
         color: white;
     }
-
     .dalamkanan img {
         width: 20px;
         height: 20px;
@@ -234,13 +236,10 @@
                         <path fill-rule="evenodd"
                             d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
                     </svg>
-                    <a href="./Cart.html">
-                        <div class="dalamkanan">
-                            <p class="nameAbout">Add to cart</p>
-                            <img src="./src/FoodDesc/Plus.png" alt="">
-                        </div>
-                    </a>
-
+                    <div class="dalamkanan">
+                        <p class="nameAbout">Add to cart</p>
+                        <img src="./src/FoodDesc/Plus.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -334,6 +333,19 @@
 
 
         });
+
+        const tombol = document.querySelector('.dalamkanan');
+        tombol.onclick = function () {
+            window.location.href = "Cart.html";
+        }
+
+        const back = document.querySelector('.backbutton');
+        back.onclick = function () {
+            goback();
+        }
+        function goback(){
+            history.back();
+        }
     </script>
 </body>
 
