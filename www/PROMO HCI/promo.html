@@ -17,21 +17,23 @@
         box-sizing: border-box;
     }
 
-    .main {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     .top {
         display: flex;
-        width: 100vw;
         align-items: center;
         justify-content: space-evenly;
         margin-top: 20px;
         gap: 10px;
+    }
+    .top img{
+        /* margin-top: -10px; */
+        left: 40px;
+    }
+
+    .main{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .first {
@@ -39,10 +41,20 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        
+    }
+
+    .first{
+        height: 100px;
     }
 
     .tophide {
         opacity: 0;
+    }
+
+    .Ijki {
+        font-weight: 500;
+        font-size: 21px;
     }
 
     #containerTeks {
@@ -83,6 +95,13 @@
         line-height: 22px;
 
         color: #000000;
+    }
+    .backbutton{
+        left: 20px;
+        position: absolute;
+    }
+    p{
+        margin-bottom: 0px !important;
     }
 </style>
 
@@ -160,14 +179,17 @@
 
         });
     </script>
-    <div class="first">
-        <div class="top">
-            <img src="./src/back.png" alt="" onclick="window.history.go(-1); return false;">
-            <p class="Ijki">PROMO</p>
-            <img class="tophide" src="./src/back.png" alt="">
+
+    <div class="main">
+        <div class="first">
+            <div class="top">
+                <span class="backbutton">
+                    <img class="TUI" src="./src/back.png" alt="">
+                </span>
+                <p class="Ijki">PROMO</p>
+            </div>
         </div>
     </div>
-
     <div id="containerTeks">
         <img id="imgBG" src="./src/Rectangle 1662.png" alt="">
         <p id="teksPromo">Promo not available yet</p>
