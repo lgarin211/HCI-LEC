@@ -42,7 +42,7 @@
         position: fixed;
     }
 
-    .top img{
+    .top img {
         /* margin-top: -10px; */
         left: 40px;
     }
@@ -52,7 +52,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        
+
     }
 
     .tophide {
@@ -182,10 +182,12 @@
     input[type="checkbox"] {
         accent-color: #F79240;
     }
-    p{
+
+    p {
         margin-bottom: 0 !important;
     }
-    .backbutton{
+
+    .backbutton {
         position: absolute;
         left: 20px;
     }
@@ -287,7 +289,7 @@
 
     <script>
         const fourth = document.querySelector(".fourth");
-        fourth.onclick = function() {
+        fourth.onclick = function () {
             window.location.href = "Payment.html";
         }
     </script>
@@ -296,7 +298,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../Personal.css">
-    <nav class="nav fixed-bottom">
+    <!-- <nav class="nav fixed-bottom">
         <ul class="nav justify-content-center">
 
             <li class="nav-item ">
@@ -348,7 +350,61 @@
 
 
         </ul>
+    </nav> -->
+
+    <nav class="nav fixed-bottom">
+        <ul class="nav justify-content-center">
+
+            <li class="nav-item ">
+                <a class="nav-link" href="../PROMO HCI/promo.html">
+                    <i class="bi bi-megaphone-fill"></i>
+                    <span class="pols">
+                        promo
+                    </span>
+                </a>
+            </li>
+
+            <li class="nav-item rinAc">
+                <a class="nav-link" href="./orderCard.html">
+                    <i class="bi bi-inbox"></i>
+                    <span class="pols">
+                        My Order
+                    </span>
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="../index.html">
+                    <i class="bi bi-house"></i>
+                    <span class="pols">
+                        Home
+                    </span>
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="../acoountPage/accountPage.html">
+                    <i class="bi bi-person"></i>
+                    <span class="pols">
+                        Account
+                    </span>
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="../settingsPage/settings.html">
+                    <i class="bi bi-gear-wide"></i>
+                    <span class="pols">
+                        Setting
+                    </span>
+                </a>
+            </li>
+
+
+        </ul>
     </nav>
+
+
     <script>
         // get all nav item add event
         const navItems = document.querySelectorAll('.nav-item');
@@ -372,7 +428,7 @@
         back.onclick = function () {
             goback();
         }
-        function goback(){
+        function goback() {
             history.back();
         }
     </script>

@@ -55,7 +55,6 @@
 .profile-pic::after{
     content: "";
     position: absolute;
-    background: url("https://webstatic.hoyoverse.com/upload/op-public/2023/02/02/0db9609e038b3fff30811dc6b516d14e_5913542854691633281.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

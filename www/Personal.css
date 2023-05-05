@@ -1,3 +1,7 @@
+a{
+    text-decoration: none;
+}
+
 .nav {
     background-color: #FFD9B8;
     height: 8vh;
@@ -21,6 +25,10 @@
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
     border-radius: 50%;
     transform: scale(0.8);
+    color: #fff;
+}
+.rinAc a i{
+    color: #fff;
 }
 
 .nav-item {
@@ -33,11 +41,13 @@
     flex-direction: column;
     line-height: 1rem;
     text-align: center;
+    text-align: center;
+    color: black;
 }
 
 a i {
     font-size: 1.5rem;
-    color: red;
+    color: black;
 }
 
 .pols {
