@@ -1,4 +1,4 @@
-a{
+a {
     text-decoration: none;
 }
 
@@ -27,7 +27,8 @@ a{
     transform: scale(0.8);
     color: #fff;
 }
-.rinAc a i{
+
+.rinAc a i {
     color: #fff;
 }
 
