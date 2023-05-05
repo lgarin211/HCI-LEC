@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hohohoho</title>
     <link rel="stylesheet" href="orderCard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,8 +27,8 @@
                 </a>
             </li>
 
-            <li class="nav-item ">
-                <a class="nav-link" href="#">
+            <li class="nav-item rinAc">
+                <a class="nav-link" href="./orderCard.html">
                     <i class="bi bi-inbox"></i>
                     <span class="pols">
                         My Order
@@ -35,7 +36,7 @@
                 </a>
             </li>
 
-            <li class="nav-item rinAc">
+            <li class="nav-item ">
                 <a class="nav-link" href="../index.html">
                     <i class="bi bi-house"></i>
                     <span class="pols">
@@ -94,7 +95,41 @@
             width: 125vw;
         }
     </style>
+    
+<div class="container">
+    <div class="top-navbar">
+        <img src="../settingsPage/arrow-next.png" alt="" onclick="window.history.go(-1); return false;">
+        MY ORDER
+    </div>
+</div>
+<style>
+    .top-navbar {
+        padding-top: 0;
+        position: sticky;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 110%;
+        height: 3.5rem;
+        /* background-color: red; */
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: #000000;
+    }
+
+    .top-navbar img {
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
+        left: 3rem;
+        transform: rotate(180deg);
+    }
+</style>
     <div id="LW">
         <div id="potw" class="container">
             <div class="status-card" style="margin-left: 1rem;">
@@ -111,6 +146,7 @@
 
 
     <!-- Order Cancelled -->
+
     <div class="container">
         <div class="order-card">
             <div class="cardTitle">
