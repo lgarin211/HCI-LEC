@@ -132,133 +132,384 @@
     </style>
     <div id="LW">
         <div id="potw" class="container">
-            <div class="status-card" style="margin-left: 1rem;">
+            <div class="status-card" style="margin-left: 1rem;" onclick="ruby('Kitchen')">
                 In Process
             </div>
-            <div class="status-card active" style="margin-left: 1rem;">
+            <div class="status-card" style="margin-left: 1rem;" onclick="ruby('Finished')">
                 Finished
-            </div>  
-            <div class="status-card " style="margin-left: 1rem;">
-                Order Cancelled
+            </div>
+            <div class="status-card " style="margin-left: 1rem;" onclick="ruby('Cancelled')">
+                Cancelled
+            </div>
+
+            <div class="status-card " style="margin-left: 1rem;" onclick="ruby('Delivery')">
+                In Delivery
             </div>
         </div>
-    </div>
 
+        <script>
+            // on status card click actve class change
+            const statusCards = document.querySelectorAll('.status-card');
+            statusCards.forEach((item) => {
+                item.addEventListener('click', (e) => {
+                    statusCards.forEach((item2) => {
+                        item2.classList.remove('active');
+                    });
+                    item.classList.add('active');
+                });
+            });
+        </script>
 
-    <!-- Order Cancelled -->
-
-    <div class="container">
-        <div class="order-card">
-            <div class="cardTitle">
-                Baso Aci
-            </div>
-            <div class="cardDesc">
-                <img src="img1.png" alt="" class="cardDescImg">
-                <div class="cardDescContent">
-                    <div class="font-type-1">
-                        Total : Rp. 15.000,00
-                    </div>
-                    <div class="font-type-1 mt-3">
-                        30 Juni 2021
-                    </div>
-                    <div class="font-type-1">
-                        Order Cancelled
-                    </div>
-                    <a href="#">
-                        <div class="click-details font-type-2">
-                            See cancelation details ->
+        <!-- Order Cancelled -->
+        <div class="container Cancelled tug">
+            <div class="order-card">
+                <div class="cardTitle">
+                    Baso Aci
+                </div>
+                <div class="cardDesc">
+                    <img src="img1.png" alt="" class="cardDescImg">
+                    <div class="cardDescContent">
+                        <div class="font-type-1">
+                            Total : Rp. 15.000,00
                         </div>
-                    </a>
+                        <div class="font-type-1 mt-3">
+                            30 Juni 2021
+                        </div>
+                        <div class="font-type-1">
+                            Order Cancelled
+                        </div>
+                        <a href="#">
+                            <div class="click-details font-type-2">
+                                See cancelation details ->
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Order Finished -->
-    <div class="container">
-        <div class="order-card">
-            <div class="cardTitle">
-                Baso Aci
-            </div>
-            <div class="cardDesc">
-                <img src="img1.png" alt="" class="cardDescImg">
-                <div class="cardDescContent">
-                    <div class="font-type-1">
-                        Total : Rp. 15.000,00
-                    </div>
-                    <div class="font-type-1 mt-3">
-                        30 Juni 2021
-                    </div>
-                    <div class="font-type-1">
-                        Order Finished
-                    </div>
-                    <a href="#">
-                        <div class="click-details font-type-2">
-                            Rate ->
+        <!-- Order Cancelled -->
+        <div class="container Cancelled tug">
+            <div class="order-card">
+                <div class="cardTitle">
+                    Baso Aci
+                </div>
+                <div class="cardDesc">
+                    <img src="img1.png" alt="" class="cardDescImg">
+                    <div class="cardDescContent">
+                        <div class="font-type-1">
+                            Total : Rp. 15.000,00
                         </div>
-                    </a>
+                        <div class="font-type-1 mt-3">
+                            30 Juni 2021
+                        </div>
+                        <div class="font-type-1">
+                            Order Cancelled
+                        </div>
+                        <a href="#">
+                            <div class="click-details font-type-2">
+                                See cancelation details ->
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- In The Kitchen -->
-    <div class="container">
-        <div class="order-card">
-            <div class="cardTitle">
-                Baso Aci
-            </div>
-            <div class="cardDesc">
-                <img src="img1.png" alt="" class="cardDescImg">
-                <div class="cardDescContent">
-                    <div class="font-type-1">
-                        Total : Rp. 15.000,00
-                    </div>
-                    <div class="font-type-1 mt-3">
-                        30 Juni 2021
-                    </div>
-                    <div class="font-type-1">
-                        In The Kitchen...
-                    </div>
-                    <a href="#">
-                        <div class="click-details font-type-2">
-                            See order details ->
+        <!-- Order Cancelled -->
+        <div class="container Cancelled tug">
+            <div class="order-card">
+                <div class="cardTitle">
+                    Baso Aci
+                </div>
+                <div class="cardDesc">
+                    <img src="img1.png" alt="" class="cardDescImg">
+                    <div class="cardDescContent">
+                        <div class="font-type-1">
+                            Total : Rp. 15.000,00
                         </div>
-                    </a>
+                        <div class="font-type-1 mt-3">
+                            30 Juni 2021
+                        </div>
+                        <div class="font-type-1">
+                            Order Cancelled
+                        </div>
+                        <a href="#">
+                            <div class="click-details font-type-2">
+                                See cancelation details ->
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- In Delivery -->
-    <div class="container">
-        <div class="order-card">
-            <div class="cardTitle">
-                Baso Aci
-            </div>
-            <div class="cardDesc">
-                <img src="img1.png" alt="" class="cardDescImg">
-                <div class="cardDescContent">
-                    <div class="font-type-1">
-                        Total : Rp. 15.000,00
-                    </div>
-                    <div class="font-type-1 mt-3">
-                        30 Juni 2021
-                    </div>
-                    <div class="font-type-1">
-                        In delivery...
-                    </div>
-                    <a href="#">
-                        <div class="click-details font-type-2">
-                            Track Order ->
+        <!-- Order Finished -->
+        <div class="container Finished tug">
+            <div class="order-card">
+                <div class="cardTitle">
+                    Baso Aci
+                </div>
+                <div class="cardDesc">
+                    <img src="img1.png" alt="" class="cardDescImg">
+                    <div class="cardDescContent">
+                        <div class="font-type-1">
+                            Total : Rp. 15.000,00
                         </div>
-                    </a>
+                        <div class="font-type-1 mt-3">
+                            30 Juni 2021
+                        </div>
+                        <div class="font-type-1">
+                            Order Finished
+                        </div>
+                        <a href="#">
+                            <div class="click-details font-type-2">
+                                Rate ->
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="orderCard.js"></script>
+        <!-- Order Finished -->
+        <div class="container Finished tug">
+            <div class="order-card">
+                <div class="cardTitle">
+                    Baso Aci
+                </div>
+                <div class="cardDesc">
+                    <img src="img1.png" alt="" class="cardDescImg">
+                    <div class="cardDescContent">
+                        <div class="font-type-1">
+                            Total : Rp. 15.000,00
+                        </div>
+                        <div class="font-type-1 mt-3">
+                            30 Juni 2021
+                        </div>
+                        <div class="font-type-1">
+                            Order Finished
+                        </div>
+                        <a href="#">
+                            <div class="click-details font-type-2">
+                                Rate ->
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Order Finished -->
+        <div class="container Finished tug">
+            <div class="order-card">
+                <div class="cardTitle">
+                    Baso Aci
+                </div>
+                <div class="cardDesc">
+                    <img src="img1.png" alt="" class="cardDescImg">
+                    <div class="cardDescContent">
+                        <div class="font-type-1">
+                            Total : Rp. 15.000,00
+                        </div>
+                        <div class="font-type-1 mt-3">
+                            30 Juni 2021
+                        </div>
+                        <div class="font-type-1">
+                            Order Finished
+                        </div>
+                        <a href="#">
+                            <div class="click-details font-type-2">
+                                Rate ->
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Order Finished -->
+        <div class="container Finished tug">
+            <div class="order-card">
+                <div class="cardTitle">
+                    Baso Aci
+                </div>
+                <div class="cardDesc">
+                    <img src="img1.png" alt="" class="cardDescImg">
+                    <div class="cardDescContent">
+                        <div class="font-type-1">
+                            Total : Rp. 15.000,00
+                        </div>
+                        <div class="font-type-1 mt-3">
+                            30 Juni 2021
+                        </div>
+                        <div class="font-type-1">
+                            Order Finished
+                        </div>
+                        <a href="#">
+                            <div class="click-details font-type-2">
+                                Rate ->
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Order Finished -->
+        <div class="container Finished tug">
+            <div class="order-card">
+                <div class="cardTitle">
+                    Baso Aci
+                </div>
+                <div class="cardDesc">
+                    <img src="img1.png" alt="" class="cardDescImg">
+                    <div class="cardDescContent">
+                        <div class="font-type-1">
+                            Total : Rp. 15.000,00
+                        </div>
+                        <div class="font-type-1 mt-3">
+                            30 Juni 2021
+                        </div>
+                        <div class="font-type-1">
+                            Order Finished
+                        </div>
+                        <a href="#">
+                            <div class="click-details font-type-2">
+                                Rate ->
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- In The Kitchen -->
+        <div class="container Kitchen tug">
+            <div class="order-card">
+                <div class="cardTitle">
+                    Baso Aci
+                </div>
+                <div class="cardDesc">
+                    <img src="img1.png" alt="" class="cardDescImg">
+                    <div class="cardDescContent">
+                        <div class="font-type-1">
+                            Total : Rp. 15.000,00
+                        </div>
+                        <div class="font-type-1 mt-3">
+                            30 Juni 2021
+                        </div>
+                        <div class="font-type-1">
+                            In The Kitchen...
+                        </div>
+                        <a href="#">
+                            <div class="click-details font-type-2">
+                                See order details ->
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- In The Kitchen -->
+        <div class="container Kitchen tug">
+            <div class="order-card">
+                <div class="cardTitle">
+                    Baso Aci
+                </div>
+                <div class="cardDesc">
+                    <img src="img1.png" alt="" class="cardDescImg">
+                    <div class="cardDescContent">
+                        <div class="font-type-1">
+                            Total : Rp. 15.000,00
+                        </div>
+                        <div class="font-type-1 mt-3">
+                            30 Juni 2021
+                        </div>
+                        <div class="font-type-1">
+                            In The Kitchen...
+                        </div>
+                        <a href="#">
+                            <div class="click-details font-type-2">
+                                See order details ->
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- In Delivery -->
+        <div class="container Delivery tug">
+            <div class="order-card">
+                <div class="cardTitle">
+                    Baso Aci
+                </div>
+                <div class="cardDesc">
+                    <img src="img1.png" alt="" class="cardDescImg">
+                    <div class="cardDescContent">
+                        <div class="font-type-1">
+                            Total : Rp. 15.000,00
+                        </div>
+                        <div class="font-type-1 mt-3">
+                            30 Juni 2021
+                        </div>
+                        <div class="font-type-1">
+                            In delivery...
+                        </div>
+                        <a href="#">
+                            <div class="click-details font-type-2">
+                                Track Order ->
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- In Delivery -->
+        <div class="container Delivery tug">
+            <div class="order-card">
+                <div class="cardTitle">
+                    Baso Aci
+                </div>
+                <div class="cardDesc">
+                    <img src="img1.png" alt="" class="cardDescImg">
+                    <div class="cardDescContent">
+                        <div class="font-type-1">
+                            Total : Rp. 15.000,00
+                        </div>
+                        <div class="font-type-1 mt-3">
+                            30 Juni 2021
+                        </div>
+                        <div class="font-type-1">
+                            In delivery...
+                        </div>
+                        <a href="#">
+                            <div class="click-details font-type-2">
+                                Track Order ->
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function ruby(params) {
+                var a = document.getElementsByClassName('tug');
+                for (let i = 0; i < a.length; i++) {
+                    a[i].style.display = 'none';
+                }
+
+                var b = document.getElementsByClassName(params);
+                for (let i = 0; i < b.length; i++) {
+                    b[i].style.display = 'block';
+                }
+            }
+
+            ruby('dan')
+        </script>
+
+
+        <script src="orderCard.js"></script>
 
 
 </body>
