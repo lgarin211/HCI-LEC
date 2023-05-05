@@ -11,7 +11,7 @@
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
         KELOMPOK HCI
     </author>
-    <content src="index.html" />
+    <content src="login.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
 
