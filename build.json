@@ -1,7 +1,7 @@
 {
     "android": {
         "release": {
-            "keystore": "../app-key.keystore",
+            "keystore": "app-key.keystore",
             "storePassword": "@Lgarin211",
             "alias": "app-key",
             "password" : "@lgarin211",
