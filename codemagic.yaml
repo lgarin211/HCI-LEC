@@ -81,7 +81,7 @@ workflows:
           cordova platform add android
       - name: Build App Bundle
         script: |
-          cordova build android --release --stacktrace --warning-mode
+          cordova build android --release --buildConfig
 
       - name: Upload Bundle
         script: |
