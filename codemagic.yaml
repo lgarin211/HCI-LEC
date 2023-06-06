@@ -77,7 +77,6 @@ workflows:
 
       - name: Add Android Platform
         script: |
-          cordova prepare
           cordova platform add android
       - name: Build App Bundle
         script: |
@@ -85,6 +84,7 @@ workflows:
 
       - name: Upload Bundle
         script: |
+
           cp -f /Users/builder/clone/platforms/android/app/build/outputs/bundle/release/app-release.aab /Users/builder/clone/
           echo "Deploying app bundle to Codemagic..."
           curl -v -X POST \
