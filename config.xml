@@ -15,7 +15,6 @@
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
 
-
     <icon density="ldpi" src="res/icon.png" />
     <icon density="mdpi" src="res/icon.png" />
     <icon density="hdpi" src="res/icon.png" />
