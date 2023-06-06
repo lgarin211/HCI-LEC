@@ -11,5 +11,13 @@
     "ecosystem:cordova"
   ],
   "author": "Agustinus Pardamean Lumban Tobing",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^12.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
+  }
 }

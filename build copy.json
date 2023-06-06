@@ -1,0 +1,14 @@
+{
+    "android": {
+        "release": {
+            // "keystore": "keystore.jks",
+            // "storePassword": "@Lgarin211",
+            // "alias": "keypo",
+            // "password" : "@lgarin211",
+            // "keystoreType": "",
+            "packageType": "bundle"
+        }
+    }
+}
+
+// cordova run android --release -- --keystore=./keystore.jks --storePassword=@Lgarin211 --alias=keypo --password=@Lgarin211 --packageType=bundle
