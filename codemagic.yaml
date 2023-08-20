@@ -60,41 +60,41 @@
 # #           - alvina.manggar@gmail.com
 
 
-# workflows:
-#   cordova-android:
-#     name: Cordova Android Workflow
-#     environment:
-#       node: latest
-#     scripts:
-#       - name: Install Dependencies
-#         script: |
-#           npm install
-#           npm ci
-#           curl -s "https://get.sdkman.io" | bash
-#           source "$HOME/.sdkman/bin/sdkman-init.sh"
-#           sdk install java 11.0.19-amzn
-#           sdk install gradle 8.0.2
+workflows:
+  cordova-android:
+    name: Cordova Android Workflow
+    environment:
+      node: latest
+    scripts:
+      - name: Install Dependencies
+        script: |
+          npm install
+          npm ci
+          curl -s "https://get.sdkman.io" | bash
+          source "$HOME/.sdkman/bin/sdkman-init.sh"
+          sdk install java 11.0.19-amzn
+          sdk install gradle 8.0.2
 
-#       - name: Add Android Platform
-#         script: |
-#           cordova platform add android
-#       - name: Build App Bundle
-#         script: |
-#           cordova run android --release -- --keystore=./keystore.jks --storePassword=@Lgarin211 --alias=keypo --password=@Lgarin211 --packageType=bundle
+      - name: Add Android Platform
+        script: |
+          cordova platform add android
+      - name: Build App Bundle
+        script: |
+          cordova run android --release -- --keystore=./keystore.jks --storePassword=@Lgarin211 --alias=keypo --password=@Lgarin211 --packageType=bundle
 
-#       - name: Upload Bundle
-#         script: |
+      - name: Upload Bundle
+        script: |
 
-#           cp -f /Users/builder/clone/platforms/android/app/build/outputs/bundle/release/app-release.aab /Users/builder/clone/
-#           echo "Deploying app bundle to Codemagic..."
-#           curl -v -X POST \
-#             -F "file=@/Users/builder/clone/app-release.aab" \
-#             -H "x-auth-token: _DhglVXCrmkGEuyzGv8KTSV0KCVnSHXwXFAdG87ccrY" \
-#             -H "content-type: multipart/form-data" \
-#             https://api.codemagic.io/artifacts/upload
-#     artifacts:
-#       - /Users/builder/clone/platforms/android/app/build/outputs/bundle/release/app-release.aab
-#     publishing: 
-#       email:
-#         recipients:
-#           - lagustinus211@gmail.com
+          cp -f /Users/builder/clone/platforms/android/app/build/outputs/bundle/release/app-release.aab /Users/builder/clone/
+          echo "Deploying app bundle to Codemagic..."
+          curl -v -X POST \
+            -F "file=@/Users/builder/clone/app-release.aab" \
+            -H "x-auth-token: _DhglVXCrmkGEuyzGv8KTSV0KCVnSHXwXFAdG87ccrY" \
+            -H "content-type: multipart/form-data" \
+            https://api.codemagic.io/artifacts/upload
+    artifacts:
+      - /Users/builder/clone/platforms/android/app/build/outputs/bundle/release/app-release.aab
+    publishing: 
+      email:
+        recipients:
+          - lagustinus211@gmail.com
